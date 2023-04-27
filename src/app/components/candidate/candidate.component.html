@@ -1,0 +1,23 @@
+
+<div class="center">
+<h1 style="color: blue;font-size:260% ;font-weight: bold;margin-top: 4%;">Welcome To Giusson</h1>
+  <form [formGroup]="candidateForm">
+<mat-form-field appearance="fill">
+  <mat-label>Choose language</mat-label>
+  <mat-select formControlName="language"  (selectionChange)="getSelected()">
+    <mat-option *ngFor="let lan of language" [value]="lan"> 
+       {{lan}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label for="from">Choose the number of expirience</mat-label>
+  <mat-select formControlName="experience" (selectionChange)="getSelected()">
+    <mat-option *ngFor="let exe of expirience" [value]="exe" >{{exe}}</mat-option>
+  </mat-select>
+</mat-form-field>
+</form>
+</div>
+<app-all-candidate-data [getChangeLan]="lanChange"  [getChangeExe]="exeChange" ></app-all-candidate-data>
+

@@ -1,0 +1,16 @@
+
+
+table {
+    width: 55%;
+    font-size: larger;
+  }
+  .center{
+    display: flex;
+    justify-content: center;
+  
+  }
+  th{
+    font-size: 110%;
+    font-weight: bold;
+    
+  }
